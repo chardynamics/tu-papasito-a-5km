@@ -1,14 +1,18 @@
 <script>
-    import { remainingCharacters } from "$lib/characters.svelte";
+import { remainingCharacters } from "$lib/characters.svelte";
 import { globalState } from "$lib/state.svelte";
 
 function changeCharacter() {
-    globalState.character = remainingCharacters[Math.floor(Math.random() * remainingCharacters.length)]
+    if (remainingCharacters.length === 1) return;
+    remainingCharacters.splice(remainingCharacters.findIndex(c => c.name === globalState.character.name), 1);
+    const index = Math.floor(Math.random() * remainingCharacters.length);
+    globalState.character = remainingCharacters[index];
 }
 </script>
 
 <div class="flex w-75 justify-between">
     <button
+        title="reject"
         onclick={() => {
             changeCharacter()
         }}
@@ -18,6 +22,7 @@ function changeCharacter() {
     </button>
 
     <button
+        title="accept"
         onclick={() => {
             changeCharacter()
         }}
