@@ -2,14 +2,27 @@
 import { remainingCharacters } from "$lib/characters.svelte";
 import { globalState } from "$lib/state.svelte";
 
+function rollCharacter() {
+	const newIndex = Math.floor(Math.random() * remainingCharacters.length);
+	const character = remainingCharacters[newIndex];
+
+	if (character.depends === undefined) return character;
+
+	const dependsOn = remainingCharacters.find((c) => c.id === character.depends);
+	if (!dependsOn) return character;
+
+	return rollCharacter();
+}
+
 function changeCharacter() {
 	if (remainingCharacters.length === 1) return;
 	const currentIndex = remainingCharacters.findIndex(
 		(c) => c.name === globalState.character.name,
 	);
 	remainingCharacters.splice(currentIndex, 1);
-	const newIndex = Math.floor(Math.random() * remainingCharacters.length);
-	globalState.character = remainingCharacters[newIndex];
+
+	const character = rollCharacter();
+	globalState.character = character;
 }
 </script>
 
