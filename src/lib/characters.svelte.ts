@@ -4,7 +4,7 @@ export const characters = [
         name: "Capybara",
         age: "26",
         height: "130cm",
-        description: "An animal",
+        description: "súper fuerte",
         image: "capybara.png"
     },
     {
@@ -63,6 +63,14 @@ export const characters = [
         height: "74cm/2'9\"",
         description: "arriba la patria",
         image: "skipper.png"
+    },
+    {
+        id: 7,
+        name: "Changua",
+        age: "500 (??)",
+        height: "??",
+        description: "re rica o mierda",
+        image: "Changua_Soup.jpg"
     }
 ];
 

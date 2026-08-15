@@ -3,7 +3,9 @@
     import NameDescription from '../lib/components/name-description.svelte'
     import TopBar from '../lib/components/top-bar.svelte'
     import Logo from '../lib/components/logo.svelte'
-    import { globalState } from '$lib/state.svelte'
+    import { hcai } from '$lib/hcai.svelte'
+
+    console.log(response.choices[0].message.content);
 </script>
 
 <div class="grid w-screen place-items-center h-screen overflow-hidden">
