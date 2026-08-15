@@ -3,6 +3,7 @@ export const globalState = $state({
         name: "Capybara",
         age: "26",
         height: "130",
-    	description: "An animal"
+        description: "An animal",
+        image: "capybara1.jpg"
     }
 });

@@ -17,7 +17,7 @@
                 <Logo />
             </div>
             <div class="flex justify-center items-center">
-                <img class="w-125 h-105" src="/assets/person.png" alt="background">
+                <img class="w-125 h-105" src="/assets/characters/{globalState.character.image}" alt="background">
             </div>
             <div class="mb-4">
                 <NameDescription name={globalState.character.name} age={globalState.character.age} height={globalState.character.height} description={globalState.character.description}/>
