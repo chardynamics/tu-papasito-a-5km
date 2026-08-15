@@ -28,7 +28,7 @@
                     ></div>
 
 
-                    <div class="absolute bottom-0 left-0 right-0 h-1/6 flex flex-col justify-center items-center px-4 text-white">
+                    <div class="absolute bottom-0 left-0 right-0 h-2/9 flex flex-col justify-center items-center px-4 text-white">
                         <div class="w-full">
                             <NameDescription name={globalState.character.name} age={globalState.character.age} height={globalState.character.height} description={globalState.character.description}/>
                         </div>
