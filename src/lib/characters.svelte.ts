@@ -65,12 +65,20 @@ export const characters = [
         image: "skipper.png"
     },
     {
-        id: 7,
+        id: 8,
         name: "Changua",
         age: "500 (??)",
         height: "??",
         description: "re rica o mierda",
-        image: "Changua_Soup.jpg"
+        image: "Changua_Soup.jpg",
+    },
+    {
+        id: 9,
+        name: "Transmi-kun",
+        age: "27",
+        height: "idk, average bus?",
+        description: "the cutest bus system in the world",
+        image: "transmi-kun.png"
     }
 ];
 
