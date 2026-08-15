@@ -19,23 +19,23 @@ export const characters = [
         id: 2,
         name: "Jáminton Campaz",
         age: "26",
-        height: "1.65m/5ft 5in",
-        description: "Very lethal goalscorer for la Selección when needed",
+        height: "1.65m/5'5\"",
+        description: "goleador letal para la selección",
         image: "campaz.png"
     },
     {
         id: 3,
         name: "Richard Ríos",
         age: "26",
-        height: "1.85m/6ft 1in",
-        description: "Greater dancer and midfielder",
+        height: "1.85m/6'1\"",
+        description: "baila baila baila - ozuna",
         image: "rios.jpg"
     },
     {
         id: 4,
         name: "Beatriz Pinzón",
         age: "25",
-        height: "1.66m/5ft 5in",
+        height: "1.66m/5'5\"",
         description: "Secretary with great economic talent",
         image: "betty.png"
     },
@@ -43,9 +43,9 @@ export const characters = [
         id: 5,
         name: "Beatriz Pinzón",
         age: "26",
-        height: "1.66m/5ft 5in",
-        description: "",
-        image: "bettydespues.png",
+        height: "1.66m/5'5\"",
+        description: "Now strong, confident, and CEO of Ecomoda",
+        image: "bettydespues.jpeg",
         depends: 4,
     },
     {
