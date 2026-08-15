@@ -4,7 +4,6 @@ import { remainingCharacters } from "$lib/characters.svelte";
 import { globalState } from "$lib/state.svelte";
 
 function changeCharacter() {
-    console.log(globalState.accepted, globalState.denied)
 	if (remainingCharacters.length === 1) return;
 	const currentIndex = remainingCharacters.findIndex(
 		(c) => c.name === globalState.character?.name,
