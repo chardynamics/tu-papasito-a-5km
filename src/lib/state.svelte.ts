@@ -1,5 +1,7 @@
+import { rollCharacter } from "$lib/utils.svelte";
+
 export const globalState: {
-    character: {
+    character?: {
         id: number;
         name: string;
         age: string;
@@ -9,12 +11,5 @@ export const globalState: {
         depends?: number;
     };
 } = $state({
-    character: {
-        id: 0,
-        name: "Capybara",
-        age: "26",
-        height: "130",
-        description: "An animal",
-        image: "capybara1.jpg",
-    }
+    character: rollCharacter()
 });

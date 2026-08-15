@@ -1,23 +1,12 @@
 <script>
+import { rollCharacter } from "$lib/utils.svelte";
 import { remainingCharacters } from "$lib/characters.svelte";
 import { globalState } from "$lib/state.svelte";
-
-function rollCharacter() {
-	const newIndex = Math.floor(Math.random() * remainingCharacters.length);
-	const character = remainingCharacters[newIndex];
-
-	if (character.depends === undefined) return character;
-
-	const dependsOn = remainingCharacters.find((c) => c.id === character.depends);
-	if (!dependsOn) return character;
-
-	return rollCharacter();
-}
 
 function changeCharacter() {
 	if (remainingCharacters.length === 1) return;
 	const currentIndex = remainingCharacters.findIndex(
-		(c) => c.name === globalState.character.name,
+		(c) => c.name === globalState.character?.name,
 	);
 	remainingCharacters.splice(currentIndex, 1);
 

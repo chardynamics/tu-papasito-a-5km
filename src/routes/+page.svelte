@@ -19,18 +19,20 @@
             <div class="flex justify-center items-center mb-4">
                 <div class="relative overflow-hidden rounded-lg w-125 h-125">
                     <!-- The sharp base image -->
-                    <img class="w-125 h-125 block object-cover" src="/assets/characters/{globalState.character.image}" alt="background">
-                    
+                    {#if globalState.character?.image}
+                        <img class="w-125 h-125 block object-cover" src={"/assets/characters/" + globalState.character?.image} alt="background">
+                    {/if}
+
                     <!-- The Blur Layer (Blurs everything directly underneath it) -->
-                    <div 
-                        class="absolute bottom-0 left-0 right-0 h-2/5 backdrop-blur-[24px] bg-gradient-to-b from-transparent via-black to-black" 
+                    <div
+                        class="absolute bottom-0 left-0 right-0 h-2/5 backdrop-blur-[24px] bg-gradient-to-b from-transparent via-black to-black"
                         style="mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);"
                     ></div>
 
 
                     <div class="absolute bottom-0 left-0 right-0 h-2/9 flex flex-col justify-center items-center px-4 text-white">
                         <div class="w-full">
-                            <NameDescription name={globalState.character.name} age={globalState.character.age} height={globalState.character.height} description={globalState.character.description}/>
+                            <NameDescription name={globalState.character?.name} age={globalState.character?.age} height={globalState.character?.height} description={globalState.character?.description}/>
                         </div>
                     </div>
                 </div>
