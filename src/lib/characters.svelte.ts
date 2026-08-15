@@ -47,6 +47,22 @@ export const characters = [
         description: "",
         image: "bettydespues.png",
         depends: 4,
+    },
+    {
+        id: 6,
+        name: "Teacher Maluma",
+        age: "32",
+        height: "175cm/5'9\"",
+        description: "maluma beibeee",
+        image: "maluma.png"
+    },
+    {
+        id: 7,
+        name: "Colombian Skipper",
+        age: "35",
+        height: "74cm/2'9\"",
+        description: "arriba la patria",
+        image: "skipper.png"
     }
 ];
 
