@@ -7,7 +7,7 @@
 </script>
 
 <div class="grid min-h-screen w-full place-items-center">
-    <img class="col-start-1 row-start-1 w-full h-full object-none object-center" src="/assets/bg.png" alt="background">
+    <img class="col-start-1 row-start-1 w-full h-full object-none object-center" src="/assets/bg.gif" alt="background">
     <div class="col-start-1 row-start-1 flex justify-center items-center w-full h-full min-h-screen z-10">
         <div class="w-125 h-195.25">
             <div class="flex justify-center items-center">
