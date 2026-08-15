@@ -2,14 +2,14 @@ export const characters = [
     {
         name: "Capybara",
         age: "26",
-        height: "130",
+        height: "130cm",
         description: "An animal",
         image: "capybara1.jpg"
     },
     {
         name: "Another Capybara",
         age: "1",
-        height: "120",
+        height: "120cm",
         description: "Another animal",
         image: "capybara2.jpg"
     },
