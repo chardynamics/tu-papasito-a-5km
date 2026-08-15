@@ -8,9 +8,6 @@
 
 <div class="grid min-h-screen w-full place-items-center">
     <img class="col-start-1 row-start-1 w-full h-full object-none object-center" src="/assets/bg.png" alt="background">
-    <div class="col-start-1 row-start-1 flex justify-center items-center w-full h-full min-h-screen">
-        <img class="col-start-1 row-start-1 w-125 h-195 z-9" src="/assets/person.png" alt="background">
-    </div>
     <div class="col-start-1 row-start-1 flex justify-center items-center w-full h-full min-h-screen z-10">
         <div class="w-125 h-195.25">
             <div class="flex justify-center items-center">
@@ -18,6 +15,9 @@
             </div>
             <div class="flex justify-center items-center">
                 <Logo />
+            </div>
+            <div class="flex justify-center items-center">
+                <img class="w-125 h-105" src="/assets/person.png" alt="background">
             </div>
             <div class="mb-4">
                 <NameDescription name={globalState.character.name} age={globalState.character.age} height={globalState.character.height} description={globalState.character.description}/>
