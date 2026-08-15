@@ -12,6 +12,13 @@ export const characters = [
         height: "120",
         description: "Another animal",
         image: "capybara2.jpg"
+    },
+    {
+        name: "Sr. Arepa",
+        age: "67",
+        height: "11cm/4inch",
+        description: "Una arepa bien rica",
+        image: "mrarepa.png"
     }
 ];
 
