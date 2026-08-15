@@ -16,14 +16,24 @@
             <div class="flex justify-center items-center">
                 <Logo />
             </div>
-            <div class="flex justify-center items-center">
-                <div class="relative overflow-hidden rounded-lg">
-                    <img class="w-125 h-105 block" src="/assets/person.png" alt="background">
-                    <img class="w-125 h-105" src="/assets/person.png" alt="background">
+            <div class="flex justify-center items-center mb-4">
+                <div class="relative overflow-hidden rounded-lg w-125 h-125">
+                    <!-- The sharp base image -->
+                    <img class="w-125 h-125 block object-cover" src="/assets/characters/{globalState.character.image}" alt="background">
+                    
+                    <!-- The Blur Layer (Blurs everything directly underneath it) -->
+                    <div 
+                        class="absolute bottom-0 left-0 right-0 h-2/5 backdrop-blur-[24px] bg-gradient-to-b from-transparent via-black to-black" 
+                        style="mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);"
+                    ></div>
+
+
+                    <div class="absolute bottom-0 left-0 right-0 h-1/6 flex flex-col justify-center items-center px-4 text-white">
+                        <div class="w-full">
+                            <NameDescription name={globalState.character.name} age={globalState.character.age} height={globalState.character.height} description={globalState.character.description}/>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="mb-4">
-                <NameDescription name={globalState.character.name} age={globalState.character.age} height={globalState.character.height} description={globalState.character.description}/>
             </div>
             <div class="flex justify-center items-center">
                 <Buttons />
