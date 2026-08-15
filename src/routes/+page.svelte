@@ -3,7 +3,7 @@
     import NameDescription from '../lib/components/name-description.svelte'
     import TopBar from '../lib/components/top-bar.svelte'
     import Logo from '../lib/components/logo.svelte'
-    import { hcai } from '$lib/hcai.svelte'
+    import { hcai } from './api/hcai.sveltee'
 
     console.log(response.choices[0].message.content);
 </script>
