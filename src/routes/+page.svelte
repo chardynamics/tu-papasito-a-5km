@@ -6,7 +6,7 @@
     import { globalState } from '$lib/state.svelte'
 </script>
 
-<div class="grid min-h-screen w-full place-items-center">
+<div class="grid w-screen place-items-center h-screen overflow-hidden">
     <img class="col-start-1 row-start-1 w-full h-full object-none object-center" src="/assets/bg.gif" alt="background">
     <div class="col-start-1 row-start-1 flex justify-center items-center w-full h-full min-h-screen z-10">
         <div class="w-125 h-195.25">
@@ -20,10 +20,10 @@
                 <div class="relative overflow-hidden rounded-lg w-125 h-125">
                     <!-- The sharp base image -->
                     <img class="w-125 h-125 block object-cover" src="/assets/characters/{globalState.character.image}" alt="background">
-
+                    
                     <!-- The Blur Layer (Blurs everything directly underneath it) -->
-                    <div
-                        class="absolute bottom-0 left-0 right-0 h-2/5 backdrop-blur-xl bg-linear-to-b from-transparent via-black to-black"
+                    <div 
+                        class="absolute bottom-0 left-0 right-0 h-2/5 backdrop-blur-[24px] bg-gradient-to-b from-transparent via-black to-black" 
                         style="mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);"
                     ></div>
 
