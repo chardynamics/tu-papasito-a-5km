@@ -4,6 +4,7 @@ import { remainingCharacters } from "$lib/characters.svelte";
 import { globalState } from "$lib/state.svelte";
 
 function changeCharacter() {
+    console.log(globalState.accepted, globalState.denied)
 	if (remainingCharacters.length === 1) return;
 	const currentIndex = remainingCharacters.findIndex(
 		(c) => c.name === globalState.character?.name,
@@ -20,7 +21,12 @@ function changeCharacter() {
 		title="reject"
 		type="button"
 		onclick={() => {
-            changeCharacter()
+			if (globalState.character?.id !== undefined) {
+				const set = new Set(globalState.denied);
+				set.add(globalState.character.id);
+				globalState.denied = Array.from(set);
+			}
+			changeCharacter()
         }}
 		class="rounded-full size-25 hover:cursor-pointer flex justify-center items-center"
 	>
@@ -38,6 +44,11 @@ function changeCharacter() {
 		title="accept"
 		type="button"
 		onclick={() => {
+			if (globalState.character?.id !== undefined) {
+				const set = new Set(globalState.accepted);
+				set.add(globalState.character.id);
+				globalState.accepted = Array.from(set);
+			}
             changeCharacter()
         }}
 		class="rounded-full size-25 hover:cursor-pointer flex justify-center items-center"

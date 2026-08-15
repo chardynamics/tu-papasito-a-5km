@@ -10,6 +10,10 @@ export const globalState: {
         image: string;
         depends?: number;
     };
+    accepted: number[];
+    denied: number[];
 } = $state({
-    character: rollCharacter()
+    character: rollCharacter(),
+    accepted: [],
+    denied: [],
 });
