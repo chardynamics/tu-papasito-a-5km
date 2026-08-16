@@ -92,7 +92,7 @@
                         </div>
 
                         <img class="w-50 h-50" src="/assets/winnie-the.gif" alt="background">
-                        
+
                         <p>
                             <SvelteMarkdown source={globalState.result} />
                         </p>
@@ -102,12 +102,12 @@
         </div>
     </div>
 
-    {#if globalState.rejectedSwipe == true}
-        <div class="col-start-1 row-start-1 flex justify-center items-center w-full h-full min-h-screen z-11 font-display">
+    {#if globalState.rejectedSwipe !== undefined}
+        <div class="col-start-1 row-start-1 flex justify-center items-center w-full h-full min-h-screen z-11 font-display pointer-events-none">
             <img class="col-start-1 row-start-1 w-full h-full object-none object-center" src="/assets/hellnah.gif" alt="background">
         </div>
-        {:else if globalState.acceptedSwipe == true }
-        <div class="col-start-1 row-start-1 flex justify-center items-center w-full h-full min-h-screen z-12 font-display">
+        {:else if globalState.acceptedSwipe !== undefined}
+        <div class="col-start-1 row-start-1 flex justify-center items-center w-full h-full min-h-screen z-12 font-display pointer-events-none">
             <img class="col-start-1 row-start-1 object-none object-center" src="/assets/calienteanim.gif" alt="background">
         </div>
     {/if}
