@@ -5,6 +5,7 @@
     import Logo from '../lib/components/logo.svelte'
     import { globalState } from '$lib/state.svelte'
     import { characters } from '$lib/characters.svelte';
+    import SvelteMarkdown from 'svelte-marked'
 </script>
 
 <div class="grid w-screen place-items-center h-screen overflow-hidden">
@@ -55,7 +56,9 @@
                 {:else}
                     <div class="h-150 flex flex-col gap-1 justify-center items-center text-white">
                         <p>Llegaste a tu papasito! This is it!</p>
-                        <p>{globalState.result}</p>
+                        <p>
+                            <SvelteMarkdown source={globalState.result} />
+                        </p>
                     </div>
                 {/if}
             {/if}
