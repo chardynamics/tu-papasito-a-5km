@@ -38,7 +38,7 @@ export const getCharacter = query(
 		console.log(history)
 
 		const response = await generateText({
-		 	model: hackclub("qwen/qwen3-32b"),
+		 	model: hackclub("google/gemini-3.5-flash-lite"),
 		 	messages: history,
 		});
 

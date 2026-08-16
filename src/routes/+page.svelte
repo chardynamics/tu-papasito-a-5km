@@ -22,7 +22,7 @@
                     <div class="relative overflow-hidden rounded-lg w-125 h-125">
                         <!-- The sharp base image -->
                         {#if globalState.character?.image}
-                            <img class="w-125 h-125 block object-cover" src={"/assets/characters/" + globalState.character?.image} alt="background">
+                            <img class="w-125 h-125 block object-cover" src="/assets/characters/{globalState.character?.image}" alt="background">
                         {/if}
 
                         <!-- The Blur Layer (Blurs everything directly underneath it) -->
