@@ -13,7 +13,7 @@ export const globalState: {
     accepted: number[];
     denied: number[];
     result?: string;
-
+    started: boolean;
     acceptedSwipe: boolean;
     rejectedSwipe: boolean;
 } = $state({
@@ -21,5 +21,6 @@ export const globalState: {
     accepted: [],
     denied: [],
     acceptedSwipe: false,
-    rejectedSwipe: false
+    rejectedSwipe: false,
+    started: false,
 });
