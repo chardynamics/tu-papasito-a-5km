@@ -3,3 +3,57 @@
 @theme {
   --font-display: "Comic Sans MS", "Comic Sans", cursive, sans-serif; 
 }
+
+.marquee-wrap {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0.5rem 0;
+}
+
+.marquee-track {
+  display: inline-flex;
+  min-width: max-content;
+  gap: 0rem;
+  animation: marquee-scroll 12s linear infinite;
+}
+
+.marquee-track span {
+  font-size: clamp(2.5rem, 6vw, 6rem);
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  background: linear-gradient(
+    90deg,
+    #ff4d6d,
+    #ff9f1c,
+    #ffe66d,
+    #2ec4b6,
+    #4cc9f0,
+    #b5179e,
+    #ff4d6d
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow-shift 3s linear infinite;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes rainbow-shift {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 200% 50%;
+  }
+}

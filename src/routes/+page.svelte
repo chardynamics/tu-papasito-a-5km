@@ -6,6 +6,35 @@
     import { globalState } from '$lib/state.svelte'
     import { characters } from '$lib/characters.svelte';
     import SvelteMarkdown from 'svelte-marked'
+    import confetti from 'canvas-confetti';
+
+    $effect(() => {
+        if (globalState.result) {
+            confetti({
+                particleCount: 180,
+                spread: 90,
+                origin: { y: 0.6 },
+                colors: ['#ff4d6d', '#ff9f1c', '#ffe66d', '#2ec4b6', '#4cc9f0', '#b5179e'],
+                scalar: 1.1
+            });
+
+            confetti({
+                particleCount: 90,
+                angle: 60,
+                spread: 80,
+                origin: { x: 0, y: 0.7 },
+                colors: ['#ff4d6d', '#2ec4b6', '#ffe66d']
+            });
+
+            confetti({
+                particleCount: 90,
+                angle: 120,
+                spread: 80,
+                origin: { x: 1, y: 0.7 },
+                colors: ['#4cc9f0', '#b5179e', '#ff9f1c']
+            });
+        }
+    });
 </script>
 
 <div class="grid w-screen place-items-center h-screen overflow-hidden">
@@ -54,8 +83,16 @@
                         </div>
                     </div>
                 {:else}
-                    <div class="h-150 flex flex-col gap-1 justify-center items-center text-white">
-                        <p>Llegaste a tu papasito! This is it!</p>
+                    <div class="h-150 flex flex-col gap-1 items-center text-white">
+                        <div class="marquee-wrap">
+                            <div class="marquee-track">
+                                <span>¡Felicidades! ¡Ya lo conoces! ¡Súper chévere! ¡Chimba!!!! </span>
+                                <span> ¡Felicidades! ¡Ya lo conoces! ¡Súper chévere! ¡Chimba!!!! </span>
+                            </div>
+                        </div>
+
+                        <img class="w-50 h-50" src="/assets/winnie-the.gif" alt="background">
+                        
                         <p>
                             <SvelteMarkdown source={globalState.result} />
                         </p>

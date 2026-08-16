@@ -26,7 +26,7 @@ function changeCharacter() {
 				globalState.rejectedSwipe = true;
 				setTimeout(() => {
 					globalState.rejectedSwipe = false;
-				}, 1000)
+				}, 500)
 				const set = new Set(globalState.denied);
 				set.add(globalState.character.id);
 				globalState.denied = Array.from(set);
@@ -57,7 +57,7 @@ function changeCharacter() {
 				globalState.acceptedSwipe = true;
 				setTimeout(() => {
 					globalState.acceptedSwipe = false;
-				}, 1000)
+				}, 750)
 				const set = new Set(globalState.accepted);
 				set.add(globalState.character.id);
 				globalState.accepted = Array.from(set);
