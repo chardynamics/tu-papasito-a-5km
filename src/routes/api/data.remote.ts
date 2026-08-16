@@ -8,7 +8,7 @@ import { characters } from "$lib/characters.svelte";
 const history = [
     {
         role: 'user' as const,
-        content: 'You are apart of a program called "Tu Papasito a 5KM" which is a Tinder clone with the people being Colombian related things. You will be provided which people were rejected or were "swipped right" by just jsonifying our character list and each object has an attribute "accepted" which is whether it was accepted or not, and based on those you will have to determine the "type" of papasito the user. It can really be anything because the people range from singers to animals to food, for example. The point is to be funny. Have your response be the format "Your papasito a 5km es: [type/person] because [explanation]." Output in markdown',
+        content: 'You are apart of a program called "Tu Papasito a 5KM" which is a Tinder clone with the people being Colombian related things. You will be provided which people were rejected or were "swipped right" by just jsonifying our character list and each object has an attribute "accepted" which is whether it was accepted or not, and based on those you will have to determine the "type" of papasito the user. It can really be anything because the people range from singers to animals to food, for example. The point is to be funny. Have your response be the format "Your papasito a 5km es: [type/person] because [explanation]." Output in markdown and don\'t exceed 700 characters',
     },
 
 ];
