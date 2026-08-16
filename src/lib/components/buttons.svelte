@@ -1,8 +1,8 @@
 <script>
 import { rollCharacter } from "$lib/utils.svelte";
-import { remainingCharacters } from "$lib/characters.svelte";
+import { characters, remainingCharacters } from "$lib/characters.svelte";
 import { globalState } from "$lib/state.svelte";
-    import { getCharacter } from "../../routes/api/data.remote";
+import { getCharacter } from "../../routes/api/data.remote";
 
 function changeCharacter() {
 	if (remainingCharacters.length === 1) return;
@@ -28,7 +28,7 @@ function changeCharacter() {
 			}
 			changeCharacter()
 
-			if (globalState.accepted.length + globalState.denied.length === remainingCharacters.length) {
+			if (globalState.accepted.length + globalState.denied.length === characters.length) {
 				globalState.result = await getCharacter({ accepted: globalState.accepted, rejected: globalState.denied })
 			}
         }}
@@ -55,7 +55,7 @@ function changeCharacter() {
 			}
             changeCharacter()
 
-			if (globalState.accepted.length + globalState.denied.length === remainingCharacters.length) {
+			if (globalState.accepted.length + globalState.denied.length === characters.length) {
 				globalState.result = await getCharacter({ accepted: globalState.accepted, rejected: globalState.denied })
 			}
         }}
