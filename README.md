@@ -1,6 +1,8 @@
 <h1 align="center">Tu papasito a 5km</h1>
 
-Imagine a Tinder, but with the most random and ridiculous things possibly. Not only that, but you can know about what's your perfect type at the end!
+Have you ever felt lonely and wanted to meet someone who was just like you? Well, this is not going to find you one, but it'll tell you what your perfect one would be like
+
+Imagine a Tinder, but with the most random and ridiculous things possibly. At the end, after rating the characters, you'll be able to find out what's your perfect type!
 
 You can check it out over at https://papasito.angelcmh.com/
 
