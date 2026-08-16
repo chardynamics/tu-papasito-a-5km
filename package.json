@@ -25,6 +25,7 @@
 	},
 	"dependencies": {
 		"@openrouter/ai-sdk-provider": "^3.0.0",
+		"@sveltejs/adapter-node": "^5.5.7",
 		"ai": "^7.0.66",
 		"canvas-confetti": "^1.9.4",
 		"svelte-marked": "^0.8.0",
