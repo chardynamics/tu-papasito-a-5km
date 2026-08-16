@@ -79,6 +79,22 @@ export const characters = [
         height: "idk, average bus?",
         description: "the cutest bus system in the world",
         image: "transmi-kun.png"
+    },
+    {
+        id: 10,
+        name: "Pablito",
+        age: "77",
+        height: "1.67m/5'5\"",
+        description: "i have money, don't ask where it came from",
+        image: "pablito.png"
+    },
+    {
+        id: 11,
+        name: "Nathan Ñero",
+        age: "18",
+        height: "1.30m/4'3\"",
+        description: "short but dangerous, socio 🔪",
+        image: "nero.png"
     }
 ];
 
