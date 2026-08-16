@@ -64,4 +64,14 @@
             {/if}
         </div>
     </div>
+
+    {#if globalState.rejectedSwipe == true}
+        <div class="col-start-1 row-start-1 flex justify-center items-center w-full h-full min-h-screen z-11 font-display">
+            <img class="col-start-1 row-start-1 w-full h-full object-none object-center" src="/assets/hellnah.gif" alt="background">
+        </div>
+        {:else if globalState.acceptedSwipe == true }
+        <div class="col-start-1 row-start-1 flex justify-center items-center w-full h-full min-h-screen z-12 font-display">
+            <img class="col-start-1 row-start-1 object-none object-center" src="/assets/calienteanim.gif" alt="background">
+        </div>
+    {/if}
 </div>

@@ -13,8 +13,13 @@ export const globalState: {
     accepted: number[];
     denied: number[];
     result?: string;
+
+    acceptedSwipe: boolean;
+    rejectedSwipe: boolean;
 } = $state({
     character: rollCharacter(),
     accepted: [],
     denied: [],
+    acceptedSwipe: false,
+    rejectedSwipe: false
 });

@@ -14,6 +14,7 @@ function changeCharacter() {
 	const character = rollCharacter();
 	globalState.character = character;
 }
+
 </script>
 
 <div class="flex w-75 justify-between">
@@ -22,6 +23,10 @@ function changeCharacter() {
 		type="button"
 		onclick={async () => {
 			if (globalState.character?.id !== undefined) {
+				globalState.rejectedSwipe = true;
+				setTimeout(() => {
+					globalState.rejectedSwipe = false;
+				}, 1000)
 				const set = new Set(globalState.denied);
 				set.add(globalState.character.id);
 				globalState.denied = Array.from(set);
@@ -49,6 +54,10 @@ function changeCharacter() {
 		type="button"
 		onclick={async () => {
 			if (globalState.character?.id !== undefined) {
+				globalState.acceptedSwipe = true;
+				setTimeout(() => {
+					globalState.acceptedSwipe = false;
+				}, 1000)
 				const set = new Set(globalState.accepted);
 				set.add(globalState.character.id);
 				globalState.accepted = Array.from(set);
