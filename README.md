@@ -2,6 +2,8 @@
 
 Imagine a Tinder, but with the most random and ridiculous things possibly. Not only that, but you can know about what's your perfect type at the end!
 
+You can check it out over at https://papasito.angelcmh.com/
+
 ## Stack
 
 We used SvelteKit with Tailwind CSS, and SvelteKit's remote functions + [Hackclub AI](https://ai.hackclub.com/) for the AI implementation.
