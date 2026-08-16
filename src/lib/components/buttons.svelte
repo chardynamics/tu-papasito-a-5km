@@ -2,6 +2,7 @@
 import { rollCharacter } from "$lib/utils.svelte";
 import { remainingCharacters } from "$lib/characters.svelte";
 import { globalState } from "$lib/state.svelte";
+    import { getCharacter } from "../../routes/api/data.remote";
 
 function changeCharacter() {
 	if (remainingCharacters.length === 1) return;
@@ -19,13 +20,17 @@ function changeCharacter() {
 	<button
 		title="reject"
 		type="button"
-		onclick={() => {
+		onclick={async () => {
 			if (globalState.character?.id !== undefined) {
 				const set = new Set(globalState.denied);
 				set.add(globalState.character.id);
 				globalState.denied = Array.from(set);
 			}
 			changeCharacter()
+
+			if (globalState.accepted.length + globalState.denied.length === remainingCharacters.length) {
+				globalState.result = await getCharacter({ accepted: globalState.accepted, rejected: globalState.denied })
+			}
         }}
 		class="rounded-full size-25 hover:cursor-pointer flex justify-center items-center"
 	>
@@ -42,13 +47,17 @@ function changeCharacter() {
 	<button
 		title="accept"
 		type="button"
-		onclick={() => {
+		onclick={async () => {
 			if (globalState.character?.id !== undefined) {
 				const set = new Set(globalState.accepted);
 				set.add(globalState.character.id);
 				globalState.accepted = Array.from(set);
 			}
             changeCharacter()
+
+			if (globalState.accepted.length + globalState.denied.length === remainingCharacters.length) {
+				globalState.result = await getCharacter({ accepted: globalState.accepted, rejected: globalState.denied })
+			}
         }}
 		class="rounded-full size-25 hover:cursor-pointer flex justify-center items-center"
 	>

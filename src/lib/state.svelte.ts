@@ -12,6 +12,7 @@ export const globalState: {
     };
     accepted: number[];
     denied: number[];
+    result?: string;
 } = $state({
     character: rollCharacter(),
     accepted: [],
