@@ -95,6 +95,30 @@ export const characters = [
         height: "1.30m/4'3\"",
         description: "short but dangerous, socio 🔪",
         image: "nero.png"
+    },
+    {
+        id: 12,
+        name: "Colombian Speed",
+        age: "21",
+        height: "1.73m/5'8\"",
+        description: "mi mamá más o menos no tiene casa",
+        image: "speed.jpg"
+    },
+    {
+        id: 13,
+        name: "Shrek Ñero",
+        age: "34",
+        height: "1.53m/5'1\"",
+        description: "los ogros son como las cebollas, tienen capas",
+        image: "shreck.jpg"
+    },
+    {
+        id: 14,
+        name: "Chiva",
+        age: "100+",
+        height: "idk the height of a chiva",
+        description: "vamonos a rumbear en la chiva",
+        image: "chiva.jpeg"
     }
 ];
 
